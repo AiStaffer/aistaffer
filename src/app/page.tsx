@@ -193,6 +193,12 @@ export default function Home() {
               <Link href="/login" className="text-sm text-gray-600 hover:text-gray-900">
                 Log in
               </Link>
+              <a
+                href="#consultancy"
+                className="text-sm text-primary-600 font-semibold hover:text-primary-800 transition-colors"
+              >
+                AI Consultancy
+              </a>
               <Link
                 href="/signup"
                 className="bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-700 transition-colors"
@@ -444,6 +450,37 @@ export default function Home() {
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Consultancy */}
+      <section id="consultancy" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-3xl bg-gradient-to-br from-gray-900 to-gray-800 p-10 sm:p-14 text-center">
+            <div className="inline-flex items-center gap-2 bg-primary-600/20 text-primary-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              🎯 Bespoke AI Solutions
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Need Something Custom-Built?
+            </h2>
+            <p className="text-gray-300 text-lg mb-3 max-w-2xl mx-auto">
+              Every business is different. Book a free video call with our company director to discuss a tailored AI solution built specifically for your business.
+            </p>
+            <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+              From custom AI workflows to full automation systems &mdash; we&apos;ll design, build, and deploy a solution that fits your exact needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="mailto:hello@aistaffer.co.uk?subject=AI%20Consultancy%20Enquiry"
+                className="bg-primary-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg"
+              >
+                Book a Free Consultation
+              </a>
+            </div>
+            <p className="text-gray-500 text-sm mt-6">
+              No commitment. Just a chat about what AI can do for your business.
+            </p>
           </div>
         </div>
       </section>
