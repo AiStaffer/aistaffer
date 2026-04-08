@@ -75,6 +75,63 @@ const pricingPlans = [
   },
 ];
 
+const aiServices = [
+  {
+    icon: '💬',
+    title: 'AI Chatbot',
+    description: 'Our flagship product. A 24/7 AI assistant trained on your business — live on your website in minutes.',
+    badge: 'Available Now',
+  },
+  {
+    icon: '📱',
+    title: 'Social Media Management',
+    description: 'AI-powered scheduling, content creation, and engagement monitoring across all your social channels.',
+    badge: 'Coming Soon',
+  },
+  {
+    icon: '📊',
+    title: 'Data Analysis & Insights',
+    description: 'Turn your business data into clear, actionable insights without needing a data scientist.',
+    badge: 'Coming Soon',
+  },
+  {
+    icon: '🎯',
+    title: 'AI Marketing & Campaigns',
+    description: 'Smarter ad targeting, automated email sequences, and copy that converts — all AI-driven.',
+    badge: 'Coming Soon',
+  },
+  {
+    icon: '🤝',
+    title: 'Sales Lead Qualification',
+    description: 'Automatically score, qualify, and prioritise leads so your team only talks to the best prospects.',
+    badge: 'Coming Soon',
+  },
+  {
+    icon: '✍️',
+    title: 'Content Generation',
+    description: 'Blog posts, product descriptions, social captions — high-quality content at scale, in your brand voice.',
+    badge: 'Coming Soon',
+  },
+  {
+    icon: '🔄',
+    title: 'Business Process Automation',
+    description: 'Eliminate repetitive manual tasks. Automate workflows across your tools and save hours every week.',
+    badge: 'Coming Soon',
+  },
+  {
+    icon: '🛍️',
+    title: 'Personalised Recommendations',
+    description: 'Show customers exactly what they want, when they want it — powered by AI-driven personalisation.',
+    badge: 'Coming Soon',
+  },
+  {
+    icon: '🔍',
+    title: 'Market Research & Trends',
+    description: 'Stay ahead of the competition with AI-powered market analysis, trend spotting, and competitor tracking.',
+    badge: 'Coming Soon',
+  },
+];
+
 const faqs = [
   {
     question: 'How long does it take to set up?',
@@ -123,6 +180,9 @@ export default function Home() {
             <div className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-sm text-gray-600 hover:text-gray-900">
                 Features
+              </a>
+              <a href="#services" className="text-sm text-gray-600 hover:text-gray-900">
+                Services
               </a>
               <a href="#pricing" className="text-sm text-gray-600 hover:text-gray-900">
                 Pricing
@@ -249,6 +309,57 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* AI Services */}
+      <section id="services" className="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              🤖 AI Consultancy
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              More Than Just a Chatbot
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              AIStaffer is your AI partner for the long term. The chatbot is just the start — here&apos;s everything we&apos;re building to help your business grow with AI.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {aiServices.map((service) => (
+              <div
+                key={service.title}
+                className={`p-6 rounded-2xl border bg-white transition-all hover:shadow-lg ${
+                  service.badge === 'Available Now'
+                    ? 'border-primary-300 ring-1 ring-primary-200'
+                    : 'border-gray-200 hover:border-primary-200'
+                }`}
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <span className="text-3xl">{service.icon}</span>
+                  <span
+                    className={`text-xs font-semibold px-2 py-1 rounded-full ${
+                      service.badge === 'Available Now'
+                        ? 'bg-primary-100 text-primary-700'
+                        : 'bg-gray-100 text-gray-500'
+                    }`}
+                  >
+                    {service.badge}
+                  </span>
+                </div>
+                <h3 className="text-base font-semibold text-gray-900 mb-1">{service.title}</h3>
+                <p className="text-gray-500 text-sm">{service.description}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-gray-500 text-sm mt-10">
+            Interested in a service that&apos;s not live yet?{' '}
+            <a href="mailto:hello@aistaffer.co.uk" className="text-primary-600 font-medium hover:underline">
+              Get in touch
+            </a>{' '}
+            and we&apos;ll let you know when it&apos;s ready.
+          </p>
         </div>
       </section>
 
